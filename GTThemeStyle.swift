@@ -17,13 +17,16 @@ enum GTThemeType {
     //WDD
     case wddDarkBlue
     
+    //EC
+    case ecBrightOrange
+    
     var imageSuffixDesc: String {
         switch self {
         case .umBrightOrange:
             return "Bright"
         case .umDarkBlue:
             return "Dark"
-        case .wddDarkBlue:
+        default:
             return ""
         }
     }
@@ -119,9 +122,17 @@ struct GTTheme{
             themeOrangeWhite()
         case .wddDarkBlue:
             wddThemeDarkBlue()
+        case .ecBrightOrange:
+            ecThemeBrightOrange()
         }
     }
     
+    static func ecThemeBrightOrange() {
+        //系統介面顏色
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
+        UINavigationBar.appearance().tintColor = UIColor.ecTangerine
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.ecCamoGreen]
+    }
     
     static func wddThemeDarkBlue(){
         //系統介面顏色
@@ -385,6 +396,25 @@ extension UIColor {
         return UIColor(red: 65.0 / 255.0, green: 139.0 / 255.0, blue: 192.0 / 255.0, alpha: 1.0)
     }
     
+}
+
+//MARK: EC 
+extension UIColor {
+    class var ecTangerine: UIColor {
+        return UIColor(red: 254.0 / 255.0, green: 143.0 / 255.0, blue: 0.0, alpha: 1.0)
+    }
+    
+    class var ecCamoGreen: UIColor {
+        return UIColor(red: 71.0 / 255.0, green: 44.0 / 255.0, blue: 27.0 / 255.0, alpha: 1.0)
+    }
+    
+    class var ecPeriwinkle: UIColor {
+        return UIColor(red: 123.0 / 255.0, green: 103.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0)
+    }
+    
+    class var ecWarmPink: UIColor {
+        return UIColor(red: 255.0 / 255.0, green: 79.0 / 255.0, blue: 114.0 / 255.0, alpha: 1.0)
+    }
 }
 
 //MARK: WDD
