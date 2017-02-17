@@ -114,6 +114,9 @@ struct GTTheme{
     static var btcRechageNotiLabelColor = UIColor.wddBrownishGrey
 
 
+    //Specific - EC
+    static var originPriceTextColor = UIColor.GTPinkishGrey
+    
     static func loadTheme(with type: GTThemeType){
         switch type {
         case .umDarkBlue:
