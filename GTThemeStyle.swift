@@ -91,6 +91,8 @@ struct GTTheme{
     
     //Nav Bar
     static var navTintColor = UIColor.GTWhite
+    static var navTitleColor = UIColor.GTWhite
+    static var navTitleFont = UIFont.systemFont(ofSize: 17)
 
     //Specific
     static var splitterViewColor = UIColor.GTWhite
@@ -134,7 +136,15 @@ struct GTTheme{
         //系統介面顏色
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
         UINavigationBar.appearance().tintColor = UIColor.ecTangerine
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.ecCamoGreen]
+        UINavigationBar.appearance().titleTextAttributes =
+            [
+                NSForegroundColorAttributeName : UIColor.ecCamoGreen,
+                NSFontAttributeName : UIFont(name: "PingFangTC-Regular", size: 17.0)!
+            ]
+        
+        
+        
+        navTintColor = UIColor.ecTangerine
     }
     
     static func wddThemeDarkBlue(){
