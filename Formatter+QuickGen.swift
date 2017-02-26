@@ -7,6 +7,12 @@
 //
 
 import Foundation
+extension Double {
+    func asString(digits: Int) -> String {
+        return NumberFormatter.decimalString(fromValue: self, withDigits: 2)!
+    }
+}
+
 extension DateFormatter {
     
     /// Quick generate dateString from specific date of current locale
