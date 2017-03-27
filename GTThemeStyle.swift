@@ -573,12 +573,36 @@ extension UIColor {
         return UIColor(red: 139.0 / 255.0, green: 87.0 / 255.0, blue: 42.0 / 255.0, alpha: 1.0)
     }
     
-    class var ecWarmGrey: UIColor { 
+    class var ecWarmGrey: UIColor {
         return UIColor(white: 153.0 / 255.0, alpha: 1.0)
     }
     
     class var ecBrightOrangeThree: UIColor {
         return UIColor(red: 253.0 / 255.0, green: 109.0 / 255.0, blue: 0.0, alpha: 1.0)
+    }
+    
+    class var ecOrangeYellow: UIColor {
+        return UIColor(red: 255.0 / 255.0, green: 165.0 / 255.0, blue: 0.0, alpha: 1.0)
+    }
+    
+    class var ecRedTwo: UIColor {
+        return UIColor(red: 255.0 / 255.0, green: 0.0, blue: 0.0, alpha: 1.0)
+    }
+    
+    class var ecGolden: UIColor {
+        return UIColor(red: 236.0 / 255.0, green: 208.0 / 255.0, blue: 0.0, alpha: 1.0)
+    }
+    
+    class var ecTrueGreen: UIColor {
+        return UIColor(red: 0.0, green: 128.0 / 255.0, blue: 0.0, alpha: 1.0)
+    }
+    
+    class var ecBrightBlueThree: UIColor {
+        return UIColor(red: 0.0, green: 127.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0)
+    }
+    
+    class var ecPrimaryBlue: UIColor {
+        return UIColor(red: 0.0, green: 0.0, blue: 255.0 / 255.0, alpha: 1.0)
     }
 }
 
