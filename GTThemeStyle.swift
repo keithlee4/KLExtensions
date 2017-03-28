@@ -604,7 +604,12 @@ extension UIColor {
     class var ecPrimaryBlue: UIColor {
         return UIColor(red: 0.0, green: 0.0, blue: 255.0 / 255.0, alpha: 1.0)
     }
+    
+    class var ecWarmGreyTwo: UIColor { 
+        return UIColor(white: 151.0 / 255.0, alpha: 1.0)
+    }
 }
+
 
 //MARK: WDD
 extension UIColor {
