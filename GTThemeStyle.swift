@@ -608,6 +608,10 @@ extension UIColor {
     class var ecWarmGreyTwo: UIColor { 
         return UIColor(white: 151.0 / 255.0, alpha: 1.0)
     }
+    
+    class var ecWarmGreyThree: UIColor { 
+        return UIColor(white: 127.0 / 255.0, alpha: 1.0)
+    }
 }
 
 
