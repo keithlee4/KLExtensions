@@ -478,4 +478,4 @@ extension UIColor {
     class var tradingNavTitleColor: UIColor {
         return UIColor(red: 61.0 / 255.0, green: 80.0 / 255.0, blue: 110.0 / 255.0, alpha: 1.0)
     }
-}
+} 
