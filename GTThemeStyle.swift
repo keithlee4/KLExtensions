@@ -464,3 +464,14 @@ extension UIColor {
         return UIColor(red: 9.0 / 255.0, green: 56.0 / 255.0, blue: 133.0 / 255.0, alpha: 1.0)
     }
 }
+
+//MARK: TradingP
+extension UIColor {
+    class var tradingLightGradientColor: UIColor {
+        return UIColor(red: 0.0 / 255.0, green: 198.0 / 255.0, blue: 224.0 / 255.0, alpha: 1.0)
+    }
+    
+    class var tradingDarkGradientColor: UIColor {
+        return UIColor(red: 0.0 / 255.0, green: 148.0 / 255.0, blue: 189.0 / 255.0, alpha: 1.0)
+    }
+}
