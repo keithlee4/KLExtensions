@@ -93,7 +93,7 @@ struct GTTheme{
     static var navTintColor = UIColor.GTWhite
     static var navTitleColor = UIColor.GTWhite
     static var navTitleFont = UIFont.systemFont(ofSize: 17)
-
+    
     //Specific
     static var splitterViewColor = UIColor.GTWhite
     static var baseViewControllerBgColor = UIColor.GTWhite
@@ -114,8 +114,8 @@ struct GTTheme{
     static var tableViewDisplayImageViewBackgroundColor = UIColor.wddWhite
     static var btcRechargeTitleLabelColor = UIColor.wddWhite
     static var btcRechageNotiLabelColor = UIColor.wddBrownishGrey
-
-
+    
+    
     //Specific - EC
     static var originPriceTextColor = UIColor.GTPinkishGrey
     
@@ -140,7 +140,7 @@ struct GTTheme{
             [
                 NSForegroundColorAttributeName : UIColor.ecCamoGreen,
                 NSFontAttributeName : UIFont(name: "PingFangTC-Regular", size: 17.0)!
-            ]
+        ]
         
         
         
@@ -211,7 +211,7 @@ struct GTTheme{
         infoCellTitleColor = UIColor.wddWarmGrey
         infoCellContentColor = UIColor.wddBlack
     }
-
+    
     static func themeOrangeWhite(){
         //系統介面顏色
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
@@ -252,7 +252,7 @@ struct GTTheme{
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
-
+        
         //共用性高的元件顏色
         tableViewTopCellBgColor = UIColor.GTCoolBlue
         btnBgColor = UIColor.GTCoolBlue
@@ -401,7 +401,7 @@ extension UIColor {
         return UIColor(red: 33.0 / 255.0, green: 137.0 / 255.0, blue: 126.0 / 255.0, alpha: 1.0)
     }
     
-    class var GTWhiteFour: UIColor { 
+    class var GTWhiteFour: UIColor {
         return UIColor(white: 216.0 / 255.0, alpha: 1.0)
     }
     
@@ -411,124 +411,8 @@ extension UIColor {
     
 }
 
-//MARK: EC 
+//MARK: EC
 extension UIColor {
-    class var ecBrightBlue: UIColor {
-        return UIColor(red: 0.0, green: 122.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecBrightOrange: UIColor {
-        return UIColor(red: 255.0 / 255.0, green: 103.0 / 255.0, blue: 27.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecBrownishGrey: UIColor {
-        return UIColor(white: 97.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecPinkishGrey: UIColor {
-        return UIColor(white: 204.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecRed: UIColor {
-        return UIColor(red: 213.0 / 255.0, green: 17.0 / 255.0, blue: 0.0, alpha: 1.0)
-    }
-    
-    class var ecDarkGrassGreen: UIColor {
-        return UIColor(red: 65.0 / 255.0, green: 117.0 / 255.0, blue: 5.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecDark: UIColor {
-        return UIColor(red: 29.0 / 255.0, green: 29.0 / 255.0, blue: 38.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecBrightOrangeTwo: UIColor {
-        return UIColor(red: 255.0 / 255.0, green: 103.0 / 255.0, blue: 0.0, alpha: 1.0)
-    }
-    
-    class var ecWhite: UIColor {
-        return UIColor(white: 255.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecVeryLightPink: UIColor {
-        return UIColor(red: 254.0 / 255.0, green: 251.0 / 255.0, blue: 246.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecWhiteTwo: UIColor {
-        return UIColor(white: 250.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecBlack: UIColor {
-        return UIColor(white: 0.0, alpha: 1.0)
-    }
-    
-    class var ecBrightBlueTwo: UIColor {
-        return UIColor(red: 0.0, green: 118.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecKermitGreen: UIColor {
-        return UIColor(red: 62.0 / 255.0, green: 195.0 / 255.0, blue: 0.0, alpha: 1.0)
-    }
-    
-    class var ecBrownishGreyTwo: UIColor {
-        return UIColor(white: 102.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecWhiteThree: UIColor {
-        return UIColor(white: 238.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecPaleGrey: UIColor {
-        return UIColor(red: 227.0 / 255.0, green: 229.0 / 255.0, blue: 233.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecBluegrey: UIColor {
-        return UIColor(red: 125.0 / 255.0, green: 155.0 / 255.0, blue: 177.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecSlate: UIColor {
-        return UIColor(red: 88.0 / 255.0, green: 105.0 / 255.0, blue: 118.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecGoldenrod: UIColor {
-        return UIColor(red: 244.0 / 255.0, green: 201.0 / 255.0, blue: 8.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecDarkSlateBlue: UIColor {
-        return UIColor(red: 22.0 / 255.0, green: 55.0 / 255.0, blue: 79.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecDarkSlateBlueTwo: UIColor {
-        return UIColor(red: 36.0 / 255.0, green: 75.0 / 255.0, blue: 105.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecCoralPink: UIColor {
-        return UIColor(red: 255.0 / 255.0, green: 105.0 / 255.0, blue: 120.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecDarkCoral: UIColor {
-        return UIColor(red: 206.0 / 255.0, green: 67.0 / 255.0, blue: 66.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecViridian: UIColor {
-        return UIColor(red: 33.0 / 255.0, green: 137.0 / 255.0, blue: 126.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecWhiteFour: UIColor {
-        return UIColor(white: 216.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecCoolBlue: UIColor {
-        return UIColor(red: 65.0 / 255.0, green: 139.0 / 255.0, blue: 192.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecBottomColorBlack: UIColor {
-        return UIColor(red: 29.0 / 255.0, green: 29.0 / 255.0, blue: 38.0 / 255.0, alpha: 0.1)
-    }
-    
-    class var ecGreyish: UIColor {
-        return UIColor(white: 178.0 / 255.0, alpha: 1.0)
-    }
-    
     class var ecTangerine: UIColor {
         return UIColor(red: 254.0 / 255.0, green: 143.0 / 255.0, blue: 0.0, alpha: 1.0)
     }
@@ -544,76 +428,7 @@ extension UIColor {
     class var ecWarmPink: UIColor {
         return UIColor(red: 255.0 / 255.0, green: 79.0 / 255.0, blue: 114.0 / 255.0, alpha: 1.0)
     }
-    
-    class var ecScarlet: UIColor {
-        return UIColor(red: 208.0 / 255.0, green: 2.0 / 255.0, blue: 27.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecVeryLightPinkTwo: UIColor {
-        return UIColor(red: 254.0 / 255.0, green: 243.0 / 255.0, blue: 229.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecWhiteFive: UIColor {
-        return UIColor(white: 245.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecBlackTwo: UIColor {
-        return UIColor(white: 51.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecPumpkinOrange: UIColor {
-        return UIColor(red: 253.0 / 255.0, green: 116.0 / 255.0, blue: 0.0, alpha: 1.0)
-    }
-    
-    class var ecOrange: UIColor {
-        return UIColor(red: 253.0 / 255.0, green: 110.0 / 255.0, blue: 0.0, alpha: 1.0)
-    }
-    
-    class var ecSepia: UIColor {
-        return UIColor(red: 139.0 / 255.0, green: 87.0 / 255.0, blue: 42.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecWarmGrey: UIColor {
-        return UIColor(white: 153.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecBrightOrangeThree: UIColor {
-        return UIColor(red: 253.0 / 255.0, green: 109.0 / 255.0, blue: 0.0, alpha: 1.0)
-    }
-    
-    class var ecOrangeYellow: UIColor {
-        return UIColor(red: 255.0 / 255.0, green: 165.0 / 255.0, blue: 0.0, alpha: 1.0)
-    }
-    
-    class var ecRedTwo: UIColor {
-        return UIColor(red: 255.0 / 255.0, green: 0.0, blue: 0.0, alpha: 1.0)
-    }
-    
-    class var ecGolden: UIColor {
-        return UIColor(red: 236.0 / 255.0, green: 208.0 / 255.0, blue: 0.0, alpha: 1.0)
-    }
-    
-    class var ecTrueGreen: UIColor {
-        return UIColor(red: 0.0, green: 128.0 / 255.0, blue: 0.0, alpha: 1.0)
-    }
-    
-    class var ecBrightBlueThree: UIColor {
-        return UIColor(red: 0.0, green: 127.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecPrimaryBlue: UIColor {
-        return UIColor(red: 0.0, green: 0.0, blue: 255.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecWarmGreyTwo: UIColor { 
-        return UIColor(white: 151.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var ecWarmGreyThree: UIColor { 
-        return UIColor(white: 127.0 / 255.0, alpha: 1.0)
-    }
 }
-
 
 //MARK: WDD
 extension UIColor {
@@ -649,3 +464,26 @@ extension UIColor {
         return UIColor(red: 9.0 / 255.0, green: 56.0 / 255.0, blue: 133.0 / 255.0, alpha: 1.0)
     }
 }
+
+//MARK: TradingP
+extension UIColor {
+    class var tradingLightGradientColor: UIColor {
+        return UIColor(red: 0.0 / 255.0, green: 198.0 / 255.0, blue: 224.0 / 255.0, alpha: 0.9)
+    }
+    
+    class var tradingDarkGradientColor: UIColor {
+        return UIColor(red: 0.0 / 255.0, green: 148.0 / 255.0, blue: 189.0 / 255.0, alpha: 0.9)
+    }
+    
+    class var tradingNavTitleColor: UIColor {
+        return UIColor(red: 61.0 / 255.0, green: 80.0 / 255.0, blue: 110.0 / 255.0, alpha: 1.0)
+    }
+    
+    class var tradingTabBarItemNormalColor: UIColor {
+        return UIColor(red: 164.0 / 255.0, green: 174.0 / 255.0, blue: 189.0 / 255.0, alpha: 1)
+    }
+    
+    class var tradingTabBarItemSelectedColor: UIColor {
+        return UIColor(red: 110.0 / 255.0, green: 132.0 / 255.0, blue: 185.0 / 255.0, alpha: 1)
+    }
+} 
