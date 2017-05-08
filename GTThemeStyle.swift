@@ -478,7 +478,7 @@ extension UIColor {
     class var tradingNavTitleColor: UIColor {
         return UIColor(red: 61.0 / 255.0, green: 80.0 / 255.0, blue: 110.0 / 255.0, alpha: 1.0)
     }
-    
+  
     class var tradingTabBarItemNormalColor: UIColor {
         return UIColor(red: 164.0 / 255.0, green: 174.0 / 255.0, blue: 189.0 / 255.0, alpha: 1)
     }
@@ -486,4 +486,5 @@ extension UIColor {
     class var tradingTabBarItemSelectedColor: UIColor {
         return UIColor(red: 110.0 / 255.0, green: 132.0 / 255.0, blue: 185.0 / 255.0, alpha: 1)
     }
+
 } 
