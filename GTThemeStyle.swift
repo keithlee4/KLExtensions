@@ -93,7 +93,7 @@ struct GTTheme{
     static var navTintColor = UIColor.GTWhite
     static var navTitleColor = UIColor.GTWhite
     static var navTitleFont = UIFont.systemFont(ofSize: 17)
-
+    
     //Specific
     static var splitterViewColor = UIColor.GTWhite
     static var baseViewControllerBgColor = UIColor.GTWhite
@@ -114,8 +114,8 @@ struct GTTheme{
     static var tableViewDisplayImageViewBackgroundColor = UIColor.wddWhite
     static var btcRechargeTitleLabelColor = UIColor.wddWhite
     static var btcRechageNotiLabelColor = UIColor.wddBrownishGrey
-
-
+    
+    
     //Specific - EC
     static var originPriceTextColor = UIColor.GTPinkishGrey
     
@@ -140,7 +140,7 @@ struct GTTheme{
             [
                 NSForegroundColorAttributeName : UIColor.ecCamoGreen,
                 NSFontAttributeName : UIFont(name: "PingFangTC-Regular", size: 17.0)!
-            ]
+        ]
         
         
         
@@ -211,7 +211,7 @@ struct GTTheme{
         infoCellTitleColor = UIColor.wddWarmGrey
         infoCellContentColor = UIColor.wddBlack
     }
-
+    
     static func themeOrangeWhite(){
         //系統介面顏色
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
@@ -252,7 +252,7 @@ struct GTTheme{
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
-
+        
         //共用性高的元件顏色
         tableViewTopCellBgColor = UIColor.GTCoolBlue
         btnBgColor = UIColor.GTCoolBlue
@@ -401,7 +401,7 @@ extension UIColor {
         return UIColor(red: 33.0 / 255.0, green: 137.0 / 255.0, blue: 126.0 / 255.0, alpha: 1.0)
     }
     
-    class var GTWhiteFour: UIColor { 
+    class var GTWhiteFour: UIColor {
         return UIColor(white: 216.0 / 255.0, alpha: 1.0)
     }
     
@@ -411,7 +411,7 @@ extension UIColor {
     
 }
 
-//MARK: EC 
+//MARK: EC
 extension UIColor {
     class var ecTangerine: UIColor {
         return UIColor(red: 254.0 / 255.0, green: 143.0 / 255.0, blue: 0.0, alpha: 1.0)
@@ -478,4 +478,13 @@ extension UIColor {
     class var tradingNavTitleColor: UIColor {
         return UIColor(red: 61.0 / 255.0, green: 80.0 / 255.0, blue: 110.0 / 255.0, alpha: 1.0)
     }
+  
+    class var tradingTabBarItemNormalColor: UIColor {
+        return UIColor(red: 164.0 / 255.0, green: 174.0 / 255.0, blue: 189.0 / 255.0, alpha: 1)
+    }
+    
+    class var tradingTabBarItemSelectedColor: UIColor {
+        return UIColor(red: 110.0 / 255.0, green: 132.0 / 255.0, blue: 185.0 / 255.0, alpha: 1)
+    }
+
 } 
