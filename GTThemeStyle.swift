@@ -487,4 +487,15 @@ extension UIColor {
         return UIColor(red: 110.0 / 255.0, green: 132.0 / 255.0, blue: 185.0 / 255.0, alpha: 1)
     }
 
+    class var tradingPaleGrey: UIColor {
+        return UIColor(red: 220.0 / 255.0, green: 224.0 / 255.0, blue: 233.0 / 255.0, alpha: 1.0)
+    }
+    
+    class var tradingWarmGrey: UIColor {
+        return UIColor(white: 155.0 / 255.0, alpha: 1.0)
+    }
+    
+    class var tradingTealish: UIColor {
+        return UIColor(red: 61.0 / 255.0, green: 204.0 / 255.0, blue: 199.0 / 255.0, alpha: 1.0)
+    }
 } 
