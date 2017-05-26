@@ -498,4 +498,8 @@ extension UIColor {
     class var tradingTealish: UIColor {
         return UIColor(red: 61.0 / 255.0, green: 204.0 / 255.0, blue: 199.0 / 255.0, alpha: 1.0)
     }
+    
+    class var tradingDarkishPink: UIColor {
+        return UIColor(red: 218.0 / 255.0, green: 65.0 / 255.0, blue: 103.0 / 255.0, alpha: 1.0)
+    }
 } 
