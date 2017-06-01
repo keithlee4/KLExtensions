@@ -10,7 +10,7 @@ import UIKit
 
 extension UIViewController {
     //MARK: 將View的行為綁定到左邊的side menu
-    func changeLeftBarButtonToDismissToRoot(tintColor: UIColor? = GTTheme.navTintColor, image: UIImage = GTTheme.backbarButtonImage){
+    func changeLeftBarButtonToDismissToRoot(tintColor: UIColor? = .tradingNavTitleColor, image: UIImage = GTTheme.backbarButtonImage){
         let button = UIButton(type: .custom)
         var resultImage = image
         if let tc = tintColor {
@@ -30,7 +30,7 @@ extension UIViewController {
         self.navigationItem.leftBarButtonItem = barButton
     }
     
-    func changeLeftBarButtonToPopToRoot(tintColor: UIColor? = GTTheme.navTintColor, image: UIImage = GTTheme.backbarButtonImage){
+    func changeLeftBarButtonToPopToRoot(tintColor: UIColor? = .tradingNavTitleColor, image: UIImage = GTTheme.backbarButtonImage){
         let button = UIButton(type: .custom)
         var resultImage = image
         if let tc = tintColor {
@@ -50,7 +50,7 @@ extension UIViewController {
     }
     
     //MARK: 將View的行為綁定到右邊的side menu
-    func changeBackBarButton(toColor tintColor: UIColor? = GTTheme.navTintColor, image: UIImage = GTTheme.backbarButtonImage){
+    func changeBackBarButton(toColor tintColor: UIColor? = .tradingNavTitleColor, image: UIImage = GTTheme.backbarButtonImage){
         let button = UIButton(type: .custom)
         var resultImage = image
         if let tc = tintColor {
