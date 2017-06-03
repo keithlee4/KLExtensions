@@ -9,7 +9,7 @@
 import Foundation
 extension Double {
     func asString(digits: Int) -> String {
-        return NumberFormatter.decimalString(fromValue: self, withDigits: 2)!
+        return NumberFormatter.decimalString(fromValue: self, withDigits: digits)!
     }
 }
 
