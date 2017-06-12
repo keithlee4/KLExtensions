@@ -465,7 +465,7 @@ extension UIColor {
     }
 }
 
-//MARK: TradingP
+//MARK: TradingP self added
 extension UIColor {
     class var tradingLightGradientColor: UIColor {
         return UIColor(red: 0.0 / 255.0, green: 198.0 / 255.0, blue: 224.0 / 255.0, alpha: 0.9)
@@ -478,7 +478,7 @@ extension UIColor {
     class var tradingNavTitleColor: UIColor {
         return UIColor(red: 61.0 / 255.0, green: 80.0 / 255.0, blue: 110.0 / 255.0, alpha: 1.0)
     }
-  
+    
     class var tradingTabBarItemNormalColor: UIColor {
         return UIColor(red: 164.0 / 255.0, green: 174.0 / 255.0, blue: 189.0 / 255.0, alpha: 1)
     }
@@ -486,7 +486,14 @@ extension UIColor {
     class var tradingTabBarItemSelectedColor: UIColor {
         return UIColor(red: 110.0 / 255.0, green: 132.0 / 255.0, blue: 185.0 / 255.0, alpha: 1)
     }
+}
 
+//MARK: TradingP from zeplin style guide
+extension UIColor {
+    class var tradingBlueyGrey: UIColor {
+        return UIColor(red: 164.0 / 255.0, green: 174.0 / 255.0, blue: 189.0 / 255.0, alpha: 1.0)
+    }
+    
     class var tradingPaleGrey: UIColor {
         return UIColor(red: 220.0 / 255.0, green: 224.0 / 255.0, blue: 233.0 / 255.0, alpha: 1.0)
     }
@@ -510,4 +517,25 @@ extension UIColor {
     class var tradingBattleshipGrey: UIColor {
         return UIColor(red: 101.0 / 255.0, green: 112.0 / 255.0, blue: 132.0 / 255.0, alpha: 1.0)
     }
-} 
+    
+    class var tradingTealishTwo: UIColor {
+        return UIColor(red: 35.0 / 255.0, green: 181.0 / 255.0, blue: 211.0 / 255.0, alpha: 1.0)
+    }
+    
+    class var tradingPinkish: UIColor {
+        return UIColor(red: 224.0 / 255.0, green: 109.0 / 255.0, blue: 137.0 / 255.0, alpha: 1.0)
+    }
+    
+    class var tradingBlack50: UIColor {
+        return UIColor(white: 0.0, alpha: 0.5)
+    }
+    
+    class var tradingCeruleanTwo: UIColor {
+        return UIColor(red: 0.0, green: 148.0 / 255.0, blue: 189.0 / 255.0, alpha: 1.0)
+    }
+    
+    class var tradingDarkSkyBlue: UIColor {
+        return UIColor(red: 75.0 / 255.0, green: 190.0 / 255.0, blue: 214.0 / 255.0, alpha: 1.0)
+    }
+    
+}
