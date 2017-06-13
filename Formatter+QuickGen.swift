@@ -50,7 +50,7 @@ extension NumberFormatter {
         ns.allowsFloats = true
         ns.maximumFractionDigits = digits
         ns.numberStyle = .decimal
-        
+        ns.groupingSeparator = ""
         
         return ns.string(from: NSNumber.init(value: fromValue))
     }
