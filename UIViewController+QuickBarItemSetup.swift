@@ -49,6 +49,33 @@ extension UIViewController {
         self.navigationItem.leftBarButtonItem = barButton
     }
     
+    func createRightBarButton(image: UIImage, target: Any, action: Selector, toColor tintColor: UIColor? = UIColor.blue, size: CGSize? = nil) -> UIButton {
+        let button = UIButton(type: .custom)
+        var resultImage = image
+        if let tc = tintColor {
+            let newImage = image.withRenderingMode(.alwaysTemplate)
+            let s = size ?? image.size
+            UIGraphicsBeginImageContextWithOptions(s, false, newImage.scale)
+            tc.set()
+            newImage.draw(in: CGRect(x:0, y:0, width:image.size.width, height:newImage.size.height))
+            resultImage = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+        }
+        
+        button.setImage(resultImage, for: .normal)
+        button.frame = CGRect(origin: .zero, size: CGSize(width: 30, height: 30))
+        button.addTarget(target, action: action, for: .touchUpInside)
+        let barButton = UIBarButtonItem(customView: button)
+        if let rBs = self.navigationItem.rightBarButtonItems {
+            self.navigationItem.rightBarButtonItems = rBs + [barButton]
+        }else {
+            self.navigationItem.rightBarButtonItem = barButton
+        }
+        
+        return button
+    }
+
+    
     //MARK: 將View的行為綁定到右邊的side menu
     func changeBackBarButton(toColor tintColor: UIColor? = .tradingNavTitleColor, image: UIImage = GTTheme.backbarButtonImage){
         let button = UIButton(type: .custom)
