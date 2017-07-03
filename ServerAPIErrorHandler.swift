@@ -23,11 +23,11 @@ enum GTServerAPIError: Error {
             case .incorrectResult(_, let message):
                 return message
             case .noData:
-                return "Data not found".localized
+                return "Data not found"
             case .noInternet:
-                return "Internet not found".localized
+                return "Internet not found"
             case .invalidToken:
-                return "Invalid Token".localized
+                return "Invalid Token"
             case .unknown(let err):
                 return err.localizedDescription
             }

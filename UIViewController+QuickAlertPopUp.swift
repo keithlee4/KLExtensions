@@ -27,7 +27,7 @@ extension UIViewController {
     func showAPIErrorResponsePopUp(from error:GTServerAPIError?, title:String, cancelTitle:String, handler: ( () -> Void )? = nil){
         var errorMessage = ""
         if let err = error {
-            errorMessage = "Error".localized + " :\(err.descString)"
+            errorMessage = "Error" + " :\(err.descString)"
         }
         
         self.showSimplePopUp(with: title, contents: errorMessage, cancelTitle: cancelTitle, cancelHandler: { action in
