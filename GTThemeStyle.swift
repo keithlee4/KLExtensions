@@ -550,4 +550,8 @@ extension UIColor {
         return UIColor(red: 121.0 / 255.0, green: 173.0 / 255.0, blue: 220.0 / 255.0, alpha: 1.0)
     }
     
+    class var tradingDusk: UIColor {
+        return UIColor(red: 61.0 / 255.0, green: 80.0 / 255.0, blue: 110.0 / 255.0, alpha: 1.0)
+    }
+    
 }
