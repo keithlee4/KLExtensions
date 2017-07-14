@@ -8,8 +8,8 @@
 
 import Foundation
 extension Double {
-    func asString(digits: Int, separator sep: String = "") -> String {
-        return NumberFormatter.decimalString(fromValue: self, withDigits: digits, separator: sep)!
+    func asString(digits: Int, force: Bool = false, separator sep: String = "") -> String {
+        return NumberFormatter.decimalString(fromValue: self, withDigits: digits, separator: sep, forceDigit: force)!
     }
 }
 
@@ -45,10 +45,14 @@ extension DateFormatter {
 
 extension NumberFormatter {
     
-    static func decimalString(fromValue:Double, withDigits digits:Int, separator sep: String = "") -> String? {
+    static func decimalString(fromValue:Double, withDigits digits:Int, separator sep: String = "", forceDigit: Bool = false) -> String? {
         let ns = NumberFormatter.init()
         ns.allowsFloats = true
         ns.maximumFractionDigits = digits
+        if forceDigit {
+            ns.minimumFractionDigits = digits
+        }
+        
         ns.numberStyle = .decimal
         ns.groupingSeparator = sep
         
