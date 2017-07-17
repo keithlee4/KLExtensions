@@ -476,7 +476,7 @@ extension UIColor {
     }
     
     class var tradingNavTitleColor: UIColor {
-        return UIColor(red: 61.0 / 255.0, green: 80.0 / 255.0, blue: 110.0 / 255.0, alpha: 1.0)
+        return .white
     }
     
     class var tradingTabBarItemNormalColor: UIColor {
@@ -580,5 +580,25 @@ extension UIColor {
     
     class var tradingWhite: UIColor {
         return UIColor(white: 240.0 / 255.0, alpha: 1.0)
+    }
+    
+    class var tradingWhiteTwo: UIColor {
+        return UIColor(white: 246.0 / 255.0, alpha: 1.0)
+    }
+    
+    class var tradingTangerine: UIColor {
+        return UIColor(red: 255.0 / 255.0, green: 135.0 / 255.0, blue: 0.0, alpha: 1.0)
+    }
+    
+    class var tradingPaleGreyThree: UIColor {
+        return UIColor(red: 250.0 / 255.0, green: 251.0 / 255.0, blue: 253.0 / 255.0, alpha: 1.0)
+    }
+    
+    class var tradingPaleGreyFour: UIColor {
+        return UIColor(red: 242.0 / 255.0, green: 245.0 / 255.0, blue: 247.0 / 255.0, alpha: 1.0)
+    }
+    
+    class var tradingPaleGreyFive: UIColor {
+        return UIColor(red: 242.0 / 255.0, green: 244.0 / 255.0, blue: 246.0 / 255.0, alpha: 1.0)
     }
 }
