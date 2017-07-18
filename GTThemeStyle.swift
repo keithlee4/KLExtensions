@@ -601,4 +601,8 @@ extension UIColor {
     class var tradingPaleGreyFive: UIColor {
         return UIColor(red: 242.0 / 255.0, green: 244.0 / 255.0, blue: 246.0 / 255.0, alpha: 1.0)
     }
+    
+    class var tradingRobinEggBlue: UIColor {
+        return UIColor(red: 151.0 / 255.0, green: 255.0 / 255.0, blue: 247.0 / 255.0, alpha: 1.0)
+    }
 }
