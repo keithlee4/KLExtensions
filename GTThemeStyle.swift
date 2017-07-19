@@ -605,4 +605,16 @@ extension UIColor {
     class var tradingRobinEggBlue: UIColor {
         return UIColor(red: 151.0 / 255.0, green: 255.0 / 255.0, blue: 247.0 / 255.0, alpha: 1.0)
     }
+    
+    class var tradingWhiteThree: UIColor {
+        return UIColor(white: 233.0 / 255.0, alpha: 1.0)
+    }
+    
+    class var tradingDuskTwo: UIColor {
+        return UIColor(red: 63.0 / 255.0, green: 96.0 / 255.0, blue: 114.0 / 255.0, alpha: 1.0)
+    }
+    
+    class var tradingGunmetal: UIColor {
+        return UIColor(red: 84.0 / 255.0, green: 85.0 / 255.0, blue: 86.0 / 255.0, alpha: 1.0)
+    }
 }
