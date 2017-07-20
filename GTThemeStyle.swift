@@ -617,4 +617,8 @@ extension UIColor {
     class var tradingGunmetal: UIColor {
         return UIColor(red: 84.0 / 255.0, green: 85.0 / 255.0, blue: 86.0 / 255.0, alpha: 1.0)
     }
+    
+    class var tradingWhiteFour: UIColor {
+        return UIColor(white: 249.0 / 255.0, alpha: 1.0)
+    }
 }
