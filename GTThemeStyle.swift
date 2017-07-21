@@ -621,4 +621,12 @@ extension UIColor {
     class var tradingWhiteFour: UIColor {
         return UIColor(white: 249.0 / 255.0, alpha: 1.0)
     }
+    
+    class var tradingWarmGreyTwo: UIColor {
+        return UIColor(white: 153.0 / 255.0, alpha: 1.0)
+    }
+    
+    class var tradingWhiteFive: UIColor {
+        return UIColor(white: 216.0 / 255.0, alpha: 1.0)
+    }
 }
