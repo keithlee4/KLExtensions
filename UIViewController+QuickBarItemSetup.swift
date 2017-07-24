@@ -10,7 +10,7 @@ import UIKit
 
 extension UIViewController {
     //MARK: 將View的行為綁定到左邊的side menu
-    func changeLeftBarButtonToDismissToRoot(tintColor: UIColor? = .tradingNavTitleColor, image: UIImage = GTTheme.backbarButtonImage){
+    func barButton(tintColor: UIColor? = .tradingNavTitleColor, image: UIImage = GTTheme.backbarButtonImage, target: Any, selector: Selector) -> UIBarButtonItem {
         let button = UIButton(type: .custom)
         var resultImage = image
         if let tc = tintColor {
@@ -25,28 +25,23 @@ extension UIViewController {
         
         button.setImage(resultImage, for: .normal)
         button.frame = CGRect(origin: .zero, size: CGSize(width: 30, height: 30))
-        button.addTarget(self, action: #selector(UIViewController.dismissRoot(sender:)), for: .touchUpInside)
+        button.addTarget(target, action: selector, for: .touchUpInside)
         let barButton = UIBarButtonItem(customView: button)
-        self.navigationItem.leftBarButtonItem = barButton
+        
+        return barButton
+    }
+    
+    func changeLeftBarButton(tintColor: UIColor? = .tradingNavTitleColor, image: UIImage = GTTheme.backbarButtonImage, target: Any, selector: Selector) {
+        self.navigationItem.leftBarButtonItem = barButton(tintColor: tintColor, image: image, target: target, selector: selector)
+    }
+    
+    
+    func changeLeftBarButtonToDismissToRoot(tintColor: UIColor? = .tradingNavTitleColor, image: UIImage = GTTheme.backbarButtonImage){
+        changeLeftBarButton(tintColor: tintColor, image: image, target: self, selector: #selector(UIViewController.dismissRoot(sender:)))
     }
     
     func changeLeftBarButtonToPopToRoot(tintColor: UIColor? = .tradingNavTitleColor, image: UIImage = GTTheme.backbarButtonImage){
-        let button = UIButton(type: .custom)
-        var resultImage = image
-        if let tc = tintColor {
-            let newImage = image.withRenderingMode(.alwaysTemplate)
-            UIGraphicsBeginImageContextWithOptions(image.size, false, newImage.scale)
-            tc.set()
-            newImage.draw(in: CGRect(x:0, y:0, width:image.size.width, height:newImage.size.height))
-            resultImage = UIGraphicsGetImageFromCurrentImageContext()!
-            UIGraphicsEndImageContext()
-        }
-        
-        button.setImage(resultImage, for: .normal)
-        button.frame = CGRect(origin: .zero, size: CGSize(width: 30, height: 30))
-        button.addTarget(self, action: #selector(UIViewController.popToRoot(sender:)), for: .touchUpInside)
-        let barButton = UIBarButtonItem(customView: button)
-        self.navigationItem.leftBarButtonItem = barButton
+        changeLeftBarButton(tintColor: tintColor, image: image, target: self, selector: #selector(UIViewController.popToRoot(sender:)))
     }
     
     func createRightBarButton(image: UIImage, target: Any, action: Selector, toColor tintColor: UIColor? = UIColor.blue, size: CGSize? = nil) -> UIButton {
@@ -78,22 +73,8 @@ extension UIViewController {
     
     //MARK: 將View的行為綁定到右邊的side menu
     func changeBackBarButton(toColor tintColor: UIColor? = .tradingNavTitleColor, image: UIImage = GTTheme.backbarButtonImage){
-        let button = UIButton(type: .custom)
-        var resultImage = image
-        if let tc = tintColor {
-            let newImage = image.withRenderingMode(.alwaysTemplate)
-            UIGraphicsBeginImageContextWithOptions(image.size, false, newImage.scale)
-            tc.set()
-            newImage.draw(in: CGRect(x:0, y:0, width:image.size.width, height:newImage.size.height))
-            resultImage = UIGraphicsGetImageFromCurrentImageContext()!
-            UIGraphicsEndImageContext()
-        }
         
-        button.setImage(resultImage, for: .normal)
-        button.frame = CGRect(origin: .zero, size: CGSize(width: 30, height: 30))
-        button.addTarget(self, action: #selector(UIViewController.pop(sender:)), for: .touchUpInside)
-        let barButton = UIBarButtonItem(customView: button)
-        self.navigationItem.leftBarButtonItem = barButton
+        changeLeftBarButton(tintColor: tintColor, image: image, target: self, selector: #selector(UIViewController.pop(sender:)))
     }
     
     func disablePushBackButton(){
