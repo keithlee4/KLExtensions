@@ -629,4 +629,8 @@ extension UIColor {
     class var tradingWhiteFive: UIColor {
         return UIColor(white: 216.0 / 255.0, alpha: 1.0)
     }
+    
+    class var tradingCloudyBlueTwo: UIColor {
+        return UIColor(red: 182.0 / 255.0, green: 196.0 / 255.0, blue: 210.0 / 255.0, alpha: 1.0)
+    }
 }
