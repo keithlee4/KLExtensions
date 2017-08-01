@@ -44,21 +44,37 @@ extension UIViewController {
         changeLeftBarButton(tintColor: tintColor, image: image, target: self, selector: #selector(UIViewController.popToRoot(sender:)))
     }
     
-    func createRightBarButton(image: UIImage, target: Any, action: Selector, toColor tintColor: UIColor? = UIColor.blue, size: CGSize? = nil) -> UIButton {
-        let button = UIButton(type: .custom)
-        var resultImage = image
-        if let tc = tintColor {
-            let newImage = image.withRenderingMode(.alwaysTemplate)
-            let s = size ?? image.size
-            UIGraphicsBeginImageContextWithOptions(s, false, newImage.scale)
-            tc.set()
-            newImage.draw(in: CGRect(x:0, y:0, width:image.size.width, height:newImage.size.height))
-            resultImage = UIGraphicsGetImageFromCurrentImageContext()!
-            UIGraphicsEndImageContext()
+    func createPureTextRightBarButton(title t: String, target: Any?, selector: Selector?) -> UIBarButtonItem {
+        let item = UIBarButtonItem.init(title: t, style: .plain, target: target, action: selector)
+        if let rBs = self.navigationItem.rightBarButtonItems {
+            self.navigationItem.rightBarButtonItems = rBs + [item]
+        }else {
+            self.navigationItem.rightBarButtonItem = item
         }
         
-        button.setImage(resultImage, for: .normal)
-        button.frame = CGRect(origin: .zero, size: CGSize(width: 30, height: 30))
+        return item
+    }
+    
+    func createRightBarButton(image: UIImage?, target: Any, action: Selector, toColor tintColor: UIColor? = UIColor.blue, size: CGSize? = nil, title: String? = nil) -> UIButton {
+        let button = UIButton(type: .custom)
+        if let img = image {
+            var resultImage = img
+            if let tc = tintColor {
+                let newImage = img.withRenderingMode(.alwaysTemplate)
+                let s = size ?? img.size
+                UIGraphicsBeginImageContextWithOptions(s, false, newImage.scale)
+                tc.set()
+                newImage.draw(in: CGRect(x:0, y:0, width:img.size.width, height:newImage.size.height))
+                resultImage = UIGraphicsGetImageFromCurrentImageContext()!
+                UIGraphicsEndImageContext()
+            }
+            
+            button.setImage(resultImage, for: .normal)
+        }
+
+        button.setTitle(title, for: .normal)
+        let s = size ?? CGSize(width: 30, height: 30)
+        button.frame = CGRect(origin: .zero, size: s)
         button.addTarget(target, action: action, for: .touchUpInside)
         let barButton = UIBarButtonItem(customView: button)
         if let rBs = self.navigationItem.rightBarButtonItems {
