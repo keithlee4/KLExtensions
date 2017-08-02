@@ -13,6 +13,7 @@ enum GTServerAPIError: Error {
     case incorrectResult(String, String)
     case noInternet
     case invalidToken
+    case apiReject
     
     //This case should directly pass response error to input
     case unknown(Error)
@@ -30,6 +31,8 @@ enum GTServerAPIError: Error {
                 return "Invalid Token"
             case .unknown(let err):
                 return err.localizedDescription
+            case .apiReject:
+                return LS.g_a_c_serverAuthFailed
             }
         }
     }
