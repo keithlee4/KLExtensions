@@ -9,7 +9,13 @@
 import Foundation
 extension Double {
     func asString(digits: Int, force: Bool = false, separator sep: String = "") -> String {
-        return NumberFormatter.decimalString(fromValue: self, withDigits: digits, separator: sep, forceDigit: force)!
+        return NumberFormatter.decimalString(fromDoubleValue: self, withDigits: digits, separator: sep, forceDigit: force)!
+    }
+}
+
+extension Float {
+    func asString(digits: Int, force: Bool = false, separator sep: String = "") -> String {
+        return NumberFormatter.decimalString(fromFloatValue: self, withDigits: digits, separator: sep, forceDigit: force)!
     }
 }
 
@@ -45,7 +51,7 @@ extension DateFormatter {
 
 extension NumberFormatter {
     
-    static func decimalString(fromValue:Double, withDigits digits:Int, separator sep: String = "", forceDigit: Bool = false) -> String? {
+    static func decimalString(fromFloatValue:Float, withDigits digits:Int, separator sep: String = "", forceDigit: Bool = false) -> String? {
         let ns = NumberFormatter.init()
         ns.allowsFloats = true
         ns.maximumFractionDigits = digits
@@ -56,7 +62,21 @@ extension NumberFormatter {
         ns.numberStyle = .decimal
         ns.groupingSeparator = sep
         
-        return ns.string(from: NSNumber.init(value: fromValue))
+        return ns.string(from: NSNumber.init(value: fromFloatValue))
+    }
+    
+    static func decimalString(fromDoubleValue:Double, withDigits digits:Int, separator sep: String = "", forceDigit: Bool = false) -> String? {
+        let ns = NumberFormatter.init()
+        ns.allowsFloats = true
+        ns.maximumFractionDigits = digits
+        if forceDigit {
+            ns.minimumFractionDigits = digits
+        }
+        
+        ns.numberStyle = .decimal
+        ns.groupingSeparator = sep
+        
+        return ns.string(from: NSNumber.init(value: fromDoubleValue))
     }
 
     
