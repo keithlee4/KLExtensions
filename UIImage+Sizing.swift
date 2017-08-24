@@ -16,4 +16,9 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return newImage
     }
+    
+    func scaleImage(rate: CGFloat) -> UIImage? {
+        let data = UIImageJPEGRepresentation(self, rate)!
+        return UIImage.init(data: data)
+    }
 }
