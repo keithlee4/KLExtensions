@@ -15,6 +15,8 @@ enum GTServerAPIError: Error {
     case noInternet
     case invalidToken
     case apiReject
+    case invalidVerision
+    case appDisabled
     
     //This case should directly pass response error to input
     case unknown(Error)
@@ -34,6 +36,10 @@ enum GTServerAPIError: Error {
                 return err.localizedDescription
             case .apiReject:
                 return LS.g_a_c_serverAuthFailed
+            case .invalidVerision:
+                return LS.g_updatemessage
+            case .appDisabled:
+                return "App Is Disabled Currently"
             }
         }
     }
