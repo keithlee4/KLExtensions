@@ -73,6 +73,8 @@ extension UIViewController {
         }
 
         button.setTitle(title, for: .normal)
+        button.titleEdgeInsets = UIEdgeInsets.init(top: 0, left: 8, bottom: 8, right: 8)
+
         let s = size ?? CGSize(width: 30, height: 30)
         button.frame = CGRect(origin: .zero, size: s)
         button.addTarget(target, action: action, for: .touchUpInside)
