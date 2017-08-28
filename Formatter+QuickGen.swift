@@ -59,6 +59,8 @@ extension NumberFormatter {
             ns.minimumFractionDigits = digits
         }
         
+        
+        ns.roundingMode = .down
         ns.numberStyle = .decimal
         ns.groupingSeparator = sep
         
@@ -72,7 +74,7 @@ extension NumberFormatter {
         if forceDigit {
             ns.minimumFractionDigits = digits
         }
-        
+        ns.roundingMode = .down
         ns.numberStyle = .decimal
         ns.groupingSeparator = sep
         
@@ -85,7 +87,7 @@ extension NumberFormatter {
         ns.allowsFloats = true
         ns.maximumFractionDigits = digits
         ns.numberStyle = .decimal
-        
+        ns.roundingMode = .down
         
         return ns.string(from: number)
     }
@@ -99,7 +101,7 @@ extension NumberFormatter {
         ns.allowsFloats = true
         ns.maximumFractionDigits = digits
         ns.numberStyle = .decimal
-        
+        ns.roundingMode = .down
         return ns.number(from: string)
     }
     
