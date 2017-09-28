@@ -138,8 +138,8 @@ struct GTTheme{
         UINavigationBar.appearance().tintColor = UIColor.ecTangerine
         UINavigationBar.appearance().titleTextAttributes =
             [
-                NSForegroundColorAttributeName : UIColor.ecCamoGreen,
-                NSFontAttributeName : UIFont(name: "PingFangTC-Regular", size: 17.0)!
+                NSAttributedStringKey.foregroundColor : UIColor.ecCamoGreen,
+                NSAttributedStringKey.font : UIFont(name: "PingFangTC-Regular", size: 17.0)!
         ]
         
         
@@ -151,7 +151,7 @@ struct GTTheme{
         //系統介面顏色
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
         UINavigationBar.appearance().tintColor = UIColor.white
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         
         mainColor = UIColor.wddNavy
         
@@ -216,7 +216,7 @@ struct GTTheme{
         //系統介面顏色
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
         UINavigationBar.appearance().tintColor = UIColor.black
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.black]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.black]
         
         //共用性高的元件顏色
         inputTextfieldColor = UIColor.GTDark
@@ -251,7 +251,7 @@ struct GTTheme{
         //系統介面顏色
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
         UINavigationBar.appearance().tintColor = UIColor.white
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         
         //共用性高的元件顏色
         tableViewTopCellBgColor = UIColor.GTCoolBlue

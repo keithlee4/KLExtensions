@@ -10,17 +10,17 @@
 import Foundation
 import UIKit
 
-extension UIView {
-    func setupUI() {
-        warning("SetupUI Is Not Overrided Yet, You Must Override This Func in subclass")
-    }
-}
-
-extension UIViewController {
-    func setupUI() {
-        warning("SetupUI Is Not Overrided Yet, You Must Override This Func in subclass")
-    }
-}
+//extension UIView {
+//    func setupUI() {
+//        warning("SetupUI Is Not Overrided Yet, You Must Override This Func in subclass")
+//    }
+//}
+//
+//extension UIViewController {
+//    func setupUI() {
+//        warning("SetupUI Is Not Overrided Yet, You Must Override This Func in subclass")
+//    }
+//}
 
 
 

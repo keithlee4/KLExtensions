@@ -101,15 +101,15 @@ extension UIViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: clearView)
     }
     
-    func pop(sender:NSObject?){
+    @objc func pop(sender:NSObject?){
         let _ = self.navigationController?.popViewController(animated: true)
     }
     
-    func popToRoot(sender: NSObject?){
+    @objc func popToRoot(sender: NSObject?){
         let _ = self.navigationController?.popToRootViewController(animated: true)
     }
     
-    func dismissRoot(sender:NSObject?){
+    @objc func dismissRoot(sender:NSObject?){
         self.dismiss(animated: true, completion: nil)
     }
     
