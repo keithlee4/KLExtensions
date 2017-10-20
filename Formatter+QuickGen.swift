@@ -7,7 +7,22 @@
 //
 
 import Foundation
+extension Decimal {
+    var doubleValue: Double {
+        let dec = NSDecimalNumber.init(decimal: self)
+        return dec.doubleValue
+    }
+    
+    func asString(digits: Int, force: Bool = false, separator sep: String = "") -> String {
+        return NumberFormatter.decimalString(fromDecimal: self, withDigits: digits, separator: sep, forceDigit: force)!
+    }
+}
+
 extension Double {
+    var decimalValue: Decimal {
+        return Decimal.init(self)
+    }
+    
     func asString(digits: Int, force: Bool = false, separator sep: String = "") -> String {
         return NumberFormatter.decimalString(fromDoubleValue: self, withDigits: digits, separator: sep, forceDigit: force)!
     }
@@ -50,6 +65,23 @@ extension DateFormatter {
 }
 
 extension NumberFormatter {
+    static func decimalString(fromDecimal: Decimal, withDigits digits:Int, separator sep: String = "", forceDigit: Bool = false) -> String? {
+        
+        let ns = NumberFormatter.init()
+        ns.allowsFloats = true
+        ns.maximumFractionDigits = digits
+        if forceDigit {
+            ns.minimumFractionDigits = digits
+        }
+        
+        
+        ns.roundingMode = .floor
+        ns.numberStyle = .decimal
+        ns.groupingSeparator = sep
+        
+        return ns.string(from: NSNumber.init(value: fromDecimal.doubleValue))
+    }
+    
     
     static func decimalString(fromFloatValue:Float, withDigits digits:Int, separator sep: String = "", forceDigit: Bool = false) -> String? {
         let ns = NumberFormatter.init()
