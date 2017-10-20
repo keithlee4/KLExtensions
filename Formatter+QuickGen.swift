@@ -10,7 +10,7 @@ import Foundation
 extension Decimal {
     var doubleValue: Double {
         let dec = NSDecimalNumber.init(decimal: self)
-        return dec.doubleValue
+        return dec.doubleValue.rounded(toPlaces: 8)
     }
     
     func asString(digits: Int, force: Bool = false, separator sep: String = "") -> String {
@@ -20,7 +20,7 @@ extension Decimal {
 
 extension Double {
     var decimalValue: Decimal {
-        return Decimal.init(self)
+        return Decimal.init(self.rounded(toPlaces: 8))
     }
     
     func asString(digits: Int, force: Bool = false, separator sep: String = "") -> String {
