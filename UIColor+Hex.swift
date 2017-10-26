@@ -9,6 +9,6 @@
 import UIKit
 extension UIColor {
     static func colorWith(hex:Int) -> UIColor {
-        return UIColor.init(hex: hex)
+        return UIColor.init(hex: hex)!
     }
 }
