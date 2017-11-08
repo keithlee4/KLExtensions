@@ -641,4 +641,12 @@ extension UIColor {
     @nonobjc class var tradingBlack: UIColor {
         return UIColor(white: 51.0 / 255.0, alpha: 1.0)
     }
+    
+    @nonobjc class var tradingPaleGreySeven: UIColor {
+        return UIColor(red: 245.0 / 255.0, green: 247.0 / 255.0, blue: 252.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var tradingCloudyBlueThree: UIColor {
+        return UIColor(red: 207.0 / 255.0, green: 214.0 / 255.0, blue: 225.0 / 255.0, alpha: 1.0)
+    }
 }
