@@ -8,6 +8,10 @@
 
 import Foundation
 extension Decimal {
+    var decimalValue: Decimal {
+        return self
+    }
+    
     var doubleValue: Double {
         let dec = NSDecimalNumber.init(decimal: self)
         return dec.doubleValue.rounded(toPlaces: 8, rule: FloatingPointRoundingRule.toNearestOrEven)
