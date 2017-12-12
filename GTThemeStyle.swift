@@ -702,4 +702,8 @@ extension UIColor {
     @nonobjc class var tradingSquash: UIColor {
         return UIColor(red: 245.0 / 255.0, green: 166.0 / 255.0, blue: 35.0 / 255.0, alpha: 1.0)
     }
+    
+    @nonobjc class var tradingBluishGreen: UIColor {
+        return UIColor(red: 14.0 / 255.0, green: 157.0 / 255.0, blue: 88.0 / 255.0, alpha: 1.0)
+    }
 }
