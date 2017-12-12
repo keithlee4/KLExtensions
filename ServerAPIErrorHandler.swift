@@ -29,7 +29,7 @@ enum GTServerAPIError: Error {
             case .noData:
                 return "Data not found"
             case .noInternet:
-                return "Internet not found"
+                return LS.g_a_network_error
             case .invalidToken:
                 return "Invalid Token"
             case .unknown(let err):
