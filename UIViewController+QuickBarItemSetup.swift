@@ -10,7 +10,7 @@ import UIKit
 
 extension UIViewController {
     //MARK: 將View的行為綁定到左邊的side menu
-    func barButton(tintColor: UIColor? = .tradingNavTitleColor, image: UIImage = GTTheme.backbarButtonImage, target: Any, selector: Selector) -> UIBarButtonItem {
+    func barButton(tintColor: UIColor? = .tradingWhite, image: UIImage = GTTheme.backbarButtonImage, target: Any, selector: Selector) -> UIBarButtonItem {
         let button = UIButton(type: .custom)
         var resultImage = image
         if let tc = tintColor {
@@ -31,16 +31,16 @@ extension UIViewController {
         return barButton
     }
     
-    func changeLeftBarButton(tintColor: UIColor? = .tradingNavTitleColor, image: UIImage = GTTheme.backbarButtonImage, target: Any, selector: Selector) {
+    func changeLeftBarButton(tintColor: UIColor? = .tradingWhite, image: UIImage = GTTheme.backbarButtonImage, target: Any, selector: Selector) {
         self.navigationItem.leftBarButtonItem = barButton(tintColor: tintColor, image: image, target: target, selector: selector)
     }
     
     
-    func changeLeftBarButtonToDismissToRoot(tintColor: UIColor? = .tradingNavTitleColor, image: UIImage = GTTheme.backbarButtonImage){
+    func changeLeftBarButtonToDismissToRoot(tintColor: UIColor? = .tradingWhite, image: UIImage = GTTheme.backbarButtonImage){
         changeLeftBarButton(tintColor: tintColor, image: image, target: self, selector: #selector(UIViewController.dismissRoot(sender:)))
     }
     
-    func changeLeftBarButtonToPopToRoot(tintColor: UIColor? = .tradingNavTitleColor, image: UIImage = GTTheme.backbarButtonImage){
+    func changeLeftBarButtonToPopToRoot(tintColor: UIColor? = .tradingWhite, image: UIImage = GTTheme.backbarButtonImage){
         changeLeftBarButton(tintColor: tintColor, image: image, target: self, selector: #selector(UIViewController.popToRoot(sender:)))
     }
     
@@ -90,7 +90,7 @@ extension UIViewController {
 
     
     //MARK: 將View的行為綁定到右邊的side menu
-    func changeBackBarButton(toColor tintColor: UIColor? = .tradingNavTitleColor, image: UIImage = GTTheme.backbarButtonImage){
+    func changeBackBarButton(toColor tintColor: UIColor? = .tradingWhite, image: UIImage = GTTheme.backbarButtonImage){
         
         changeLeftBarButton(tintColor: tintColor, image: image, target: self, selector: #selector(UIViewController.pop(sender:)))
     }

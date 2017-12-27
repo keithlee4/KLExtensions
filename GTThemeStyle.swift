@@ -467,243 +467,93 @@ extension UIColor {
 
 //MARK: TradingP self added
 extension UIColor {
-    class var tradingLightGradientColor: UIColor {
-        return UIColor(red: 0.0 / 255.0, green: 198.0 / 255.0, blue: 224.0 / 255.0, alpha: 0.9)
-    }
-    
-    class var tradingDarkGradientColor: UIColor {
-        return UIColor(red: 0.0 / 255.0, green: 148.0 / 255.0, blue: 189.0 / 255.0, alpha: 0.9)
-    }
-    
-    class var tradingNavTitleColor: UIColor {
-        return .white
-    }
-    
-    class var tradingTabBarItemNormalColor: UIColor {
-        return UIColor(red: 164.0 / 255.0, green: 174.0 / 255.0, blue: 189.0 / 255.0, alpha: 1)
-    }
-    
-    class var tradingTabBarItemSelectedColor: UIColor {
-        return UIColor(red: 110.0 / 255.0, green: 132.0 / 255.0, blue: 185.0 / 255.0, alpha: 1)
-    }
+//    class var tradingLightGradientColor: UIColor {
+//        return UIColor(red: 0.0 / 255.0, green: 198.0 / 255.0, blue: 224.0 / 255.0, alpha: 0.9)
+//    }
+//
+//    class var tradingDarkGradientColor: UIColor {
+//        return UIColor(red: 0.0 / 255.0, green: 148.0 / 255.0, blue: 189.0 / 255.0, alpha: 0.9)
+//    }
+//
+//    class var .tradingWhite: UIColor {
+//        return .white
+//    }
+//
+//    class var tradingTabBarItemNormalColor: UIColor {
+//        return UIColor(red: 164.0 / 255.0, green: 174.0 / 255.0, blue: 189.0 / 255.0, alpha: 1)
+//    }
+//
+//    class var tradingTabBarItemSelectedColor: UIColor {
+//        return UIColor(red: 110.0 / 255.0, green: 132.0 / 255.0, blue: 185.0 / 255.0, alpha: 1)
+//    }
 }
 
 //MARK: TradingP from zeplin style guide
 extension UIColor {
-    
-    @nonobjc class var tradingBlueyGrey: UIColor {
-        return UIColor(red: 164.0 / 255.0, green: 174.0 / 255.0, blue: 189.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingPaleGrey: UIColor {
-        return UIColor(red: 220.0 / 255.0, green: 224.0 / 255.0, blue: 233.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingWarmGrey: UIColor {
-        return UIColor(white: 155.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingTealish: UIColor {
-        return UIColor(red: 61.0 / 255.0, green: 204.0 / 255.0, blue: 199.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingDarkishPink: UIColor {
-        return UIColor(red: 218.0 / 255.0, green: 65.0 / 255.0, blue: 103.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingCerulean: UIColor {
-        return UIColor(red: 2.0 / 255.0, green: 123.0 / 255.0, blue: 206.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingBattleshipGrey: UIColor {
-        return UIColor(red: 101.0 / 255.0, green: 112.0 / 255.0, blue: 132.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingTealishTwo: UIColor {
-        return UIColor(red: 35.0 / 255.0, green: 181.0 / 255.0, blue: 211.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingPinkish: UIColor {
-        return UIColor(red: 224.0 / 255.0, green: 109.0 / 255.0, blue: 137.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingBlack50: UIColor {
-        return UIColor(white: 0.0, alpha: 0.5)
-    }
-    
-    @nonobjc class var tradingCeruleanTwo: UIColor {
-        return UIColor(red: 0.0, green: 148.0 / 255.0, blue: 189.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingDarkSkyBlue: UIColor {
-        return UIColor(red: 75.0 / 255.0, green: 190.0 / 255.0, blue: 214.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingCoral: UIColor {
-        return UIColor(red: 249.0 / 255.0, green: 84.0 / 255.0, blue: 84.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingCharcoalGrey: UIColor {
-        return UIColor(red: 54.0 / 255.0, green: 58.0 / 255.0, blue: 61.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingPerrywinkle: UIColor {
-        return UIColor(red: 121.0 / 255.0, green: 173.0 / 255.0, blue: 220.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingWaterBlue: UIColor {
-        return UIColor(red: 22.0 / 255.0, green: 178.0 / 255.0, blue: 221.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingPaleGreyTwo: UIColor {
-        return UIColor(red: 231.0 / 255.0, green: 235.0 / 255.0, blue: 239.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingMediumGreen: UIColor {
-        return UIColor(red: 56.0 / 255.0, green: 190.0 / 255.0, blue: 74.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingBlueGrey: UIColor {
-        return UIColor(red: 88.0 / 255.0, green: 118.0 / 255.0, blue: 133.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingCloudyBlue: UIColor {
-        return UIColor(red: 177.0 / 255.0, green: 221.0 / 255.0, blue: 211.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingWhite: UIColor {
-        return UIColor(white: 247.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingTangerine: UIColor {
-        return UIColor(red: 255.0 / 255.0, green: 135.0 / 255.0, blue: 0.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingPaleGreyThree: UIColor {
-        return UIColor(red: 250.0 / 255.0, green: 251.0 / 255.0, blue: 253.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingWhiteTwo: UIColor {
-        return UIColor(white: 246.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingPaleGreyFour: UIColor {
-        return UIColor(red: 242.0 / 255.0, green: 245.0 / 255.0, blue: 247.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingPaleGreyFive: UIColor {
-        return UIColor(red: 242.0 / 255.0, green: 244.0 / 255.0, blue: 246.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingRobinEggBlue: UIColor {
-        return UIColor(red: 151.0 / 255.0, green: 255.0 / 255.0, blue: 247.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingWhiteThree: UIColor {
-        return UIColor(white: 233.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingDuskTwo: UIColor {
-        return UIColor(red: 63.0 / 255.0, green: 96.0 / 255.0, blue: 114.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingGunmetal: UIColor {
-        return UIColor(red: 84.0 / 255.0, green: 85.0 / 255.0, blue: 86.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingWhiteFour: UIColor {
-        return UIColor(white: 249.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingWarmGreyTwo: UIColor {
-        return UIColor(white: 153.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingWhiteFive: UIColor {
-        return UIColor(white: 216.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingCloudyBlueTwo: UIColor {
-        return UIColor(red: 182.0 / 255.0, green: 196.0 / 255.0, blue: 210.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingPaleGreySix: UIColor {
-        return UIColor(red: 241.0 / 255.0, green: 242.0 / 255.0, blue: 245.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingBlueyGreyTwo: UIColor {
-        return UIColor(red: 152.0 / 255.0, green: 163.0 / 255.0, blue: 181.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingWarmGreyThree: UIColor {
-        return UIColor(white: 151.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingBrownishGreyTwo: UIColor {
-        return UIColor(white: 102.0 / 255.0, alpha: 1.0)
-    }
-    
     @nonobjc class var tradingWindowsBlue: UIColor {
         return UIColor(red: 69.0 / 255.0, green: 176.0 / 255.0, blue: 206.0 / 255.0, alpha: 1.0)
     }
     
-    @nonobjc class var tradingBrownishGrey: UIColor {
-        return UIColor(white: 106.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingDusk: UIColor {
-        return UIColor(red: 61.0 / 255.0, green: 80.0 / 255.0, blue: 110.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingGreyishBrown78: UIColor {
-        return UIColor(white: 77.0 / 255.0, alpha: 0.78)
-    }
-    
-    @nonobjc class var tradingPumpkinOrange: UIColor {
-        return UIColor(red: 254.0 / 255.0, green: 135.0 / 255.0, blue: 1.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var tradingTiffanyBlue: UIColor {
-        return UIColor(red: 127.0 / 255.0, green: 232.0 / 255.0, blue: 235.0 / 255.0, alpha: 1.0)
+    @nonobjc class var tradingPaleGrey: UIColor {
+        return UIColor(red: 242.0 / 255.0, green: 244.0 / 255.0, blue: 246.0 / 255.0, alpha: 1.0)
     }
     
     @nonobjc class var tradingBlack: UIColor {
         return UIColor(white: 51.0 / 255.0, alpha: 1.0)
     }
     
-    @nonobjc class var tradingPaleGreySeven: UIColor {
-        return UIColor(red: 245.0 / 255.0, green: 247.0 / 255.0, blue: 252.0 / 255.0, alpha: 1.0)
+    @nonobjc class var tradingWhite: UIColor {
+        return UIColor(white: 255.0 / 255.0, alpha: 1.0)
     }
     
-    @nonobjc class var tradingCloudyBlueThree: UIColor {
-        return UIColor(red: 207.0 / 255.0, green: 214.0 / 255.0, blue: 225.0 / 255.0, alpha: 1.0)
+    @nonobjc class var tradingBlueyGrey: UIColor {
+        return UIColor(red: 164.0 / 255.0, green: 174.0 / 255.0, blue: 189.0 / 255.0, alpha: 1.0)
     }
     
-    @nonobjc class var tradingSteel: UIColor {
-        return UIColor(red: 137.0 / 255.0, green: 137.0 / 255.0, blue: 138.0 / 255.0, alpha: 1.0)
+    @nonobjc class var tradingBattleshipGrey: UIColor {
+        return UIColor(red: 101.0 / 255.0, green: 112.0 / 255.0, blue: 132.0 / 255.0, alpha: 1.0)
     }
     
-    @nonobjc class var tradingGreyishBrown: UIColor {
-        return UIColor(white: 77.0 / 255.0, alpha: 1.0)
+    @nonobjc class var tradingBlueGrey: UIColor {
+        return UIColor(red: 88.0 / 255.0, green: 118.0 / 255.0, blue: 133.0 / 255.0, alpha: 1.0)
     }
     
-    @nonobjc class var tradingWhite80: UIColor {
-        return UIColor(white: 252.0 / 255.0, alpha: 0.8)
+    @nonobjc class var tradingPaleGreyTwo: UIColor {
+        return UIColor(red: 220.0 / 255.0, green: 224.0 / 255.0, blue: 233.0 / 255.0, alpha: 1.0)
     }
     
-    @nonobjc class var tradingDuckEggBlue: UIColor {
-        return UIColor(red: 196.0 / 255.0, green: 238.0 / 255.0, blue: 250.0 / 255.0, alpha: 1.0)
+    @nonobjc class var tradingWhiteTwo: UIColor {
+        return UIColor(white: 250.0 / 255.0, alpha: 1.0)
     }
     
-    @nonobjc class var tradingPaleGreyEight: UIColor {
-        return UIColor(red: 240.0 / 255.0, green: 242.0 / 255.0, blue: 245.0 / 255.0, alpha: 1.0)
+    @nonobjc class var tradingDarkishPink: UIColor {
+        return UIColor(red: 218.0 / 255.0, green: 65.0 / 255.0, blue: 103.0 / 255.0, alpha: 1.0)
     }
     
-    @nonobjc class var tradingSquash: UIColor {
-        return UIColor(red: 245.0 / 255.0, green: 166.0 / 255.0, blue: 35.0 / 255.0, alpha: 1.0)
+    @nonobjc class var tradingTiffanyBlue: UIColor {
+        return UIColor(red: 127.0 / 255.0, green: 232.0 / 255.0, blue: 235.0 / 255.0, alpha: 1.0)
     }
     
-    @nonobjc class var tradingBluishGreen: UIColor {
-        return UIColor(red: 14.0 / 255.0, green: 157.0 / 255.0, blue: 88.0 / 255.0, alpha: 1.0)
+    @nonobjc class var tradingMediumGreen: UIColor {
+        return UIColor(red: 56.0 / 255.0, green: 190.0 / 255.0, blue: 74.0 / 255.0, alpha: 1.0)
     }
+    
+    @nonobjc class var tradingCoral: UIColor {
+        return UIColor(red: 249.0 / 255.0, green: 84.0 / 255.0, blue: 84.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var tradingPumpkinOrange: UIColor {
+        return UIColor(red: 254.0 / 255.0, green: 135.0 / 255.0, blue: 1.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var tradingSunYellow: UIColor {
+        return UIColor(red: 255.0 / 255.0, green: 198.0 / 255.0, blue: 44.0 / 255.0, alpha: 
+            1.0)
+    }
+    
+    @nonobjc class var tradingRobinEggBlue: UIColor {
+        return UIColor(red: 151.0 / 255.0, green: 255.0 / 255.0, blue: 247.0 / 255.0, alpha: 1.0)
+    }
+
+
 }
