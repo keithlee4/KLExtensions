@@ -55,35 +55,55 @@ extension UIViewController {
         return item
     }
     
-    func createRightBarButton(image: UIImage?, target: Any, action: Selector, toColor tintColor: UIColor? = UIColor.blue, size: CGSize? = nil, title: String? = nil) -> UIButton {
+    func createRightBarButton(image: UIImage?, target: Any, action: Selector, toColor tintColor: UIColor? = UIColor.blue, size: CGSize? = nil, title: String? = nil, isAlignVertical: Bool = false) -> UIButton {
         let button = UIButton(type: .custom)
-        if let img = image {
-            var resultImage = img
-            if let tc = tintColor {
-                let newImage = img.withRenderingMode(.alwaysTemplate)
-                let s = size ?? img.size
-                UIGraphicsBeginImageContextWithOptions(s, false, newImage.scale)
-                tc.set()
-                newImage.draw(in: CGRect(x:0, y:0, width:img.size.width, height:newImage.size.height))
-                resultImage = UIGraphicsGetImageFromCurrentImageContext()!
-                UIGraphicsEndImageContext()
-            }
-            
-            button.setImage(resultImage, for: .normal)
-        }
-
-        button.setTitle(title, for: .normal)
-        button.titleEdgeInsets = UIEdgeInsets.init(top: 0, left: 8, bottom: 8, right: 8)
-
         let s = size ?? CGSize(width: 30, height: 30)
         button.frame = CGRect(origin: .zero, size: s)
         button.addTarget(target, action: action, for: .touchUpInside)
+        var resultImage = image
+        if let img = image {
+            resultImage = img
+            if let tc = tintColor {
+                let newImage = img.withRenderingMode(.alwaysTemplate)
+                var imgSize : CGSize
+                
+                imgSize = isAlignVertical ? CGSize.init(width: s.width * 0.5, height: s.height * 0.5) : s
+                UIGraphicsBeginImageContextWithOptions(imgSize, false, newImage.scale)
+                
+                tc.set()
+                newImage.draw(in: CGRect(x:0, y:0, width:imgSize.width, height:imgSize.height))
+                resultImage = UIGraphicsGetImageFromCurrentImageContext()!
+                UIGraphicsEndImageContext()
+            }
+        }
+        
+        
+        if isAlignVertical {
+            button.set(
+                image: resultImage,
+                title: title ?? "",
+                titlePosition: .bottom,
+                additionalSpacing: 0,
+                state: .normal
+            )
+            
+            button.titleLabel?.font = UIFont.systemFont(ofSize: s.height - (resultImage?.size.height ?? 0))
+//            button.titleLabel?.adjustsFontSizeToFitWidth = true
+            button.titleLabel?.sizeToFit()
+        }else {
+            button.setImage(resultImage, for: .normal)
+            button.setTitle(title, for: .normal)
+            button.titleEdgeInsets = UIEdgeInsets.init(top: 0, left: 8, bottom: 8, right: 8)
+        }
+        
+        
         let barButton = UIBarButtonItem(customView: button)
         if let rBs = self.navigationItem.rightBarButtonItems {
             self.navigationItem.rightBarButtonItems = rBs + [barButton]
         }else {
             self.navigationItem.rightBarButtonItem = barButton
         }
+        
         
         return button
     }
