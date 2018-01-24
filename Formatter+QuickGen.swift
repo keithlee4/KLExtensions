@@ -17,7 +17,7 @@ extension Decimal {
         return dec.doubleValue.rounded(toPlaces: 8, rule: FloatingPointRoundingRule.toNearestOrEven)
     }
     
-    func asString(digits: Int, force: Bool = false, separator sep: String = "", roundMode:  NumberFormatter.RoundingMode = .floor) -> String {
+    func asString(digits: Int, force: Bool = false, separator sep: String = "", roundMode:  NumberFormatter.RoundingMode = .halfEven) -> String {
         return NumberFormatter.decimalString(fromDecimal: self, withDigits: digits, separator: sep, forceDigit: force, roundMode: roundMode)!
     }
 }
@@ -27,13 +27,13 @@ extension Double {
         return Decimal.init(self.rounded(toPlaces: 8))
     }
     
-    func asString(digits: Int, force: Bool = false, separator sep: String = "", roundMode:  NumberFormatter.RoundingMode = .floor) -> String {
+    func asString(digits: Int, force: Bool = false, separator sep: String = "", roundMode:  NumberFormatter.RoundingMode = .halfEven) -> String {
         return NumberFormatter.decimalString(fromDoubleValue: self, withDigits: digits, separator: sep, forceDigit: force, roundMode: roundMode)!
     }
 }
 
 extension Float {
-    func asString(digits: Int, force: Bool = false, separator sep: String = "", roundMode:  NumberFormatter.RoundingMode = .floor) -> String {
+    func asString(digits: Int, force: Bool = false, separator sep: String = "", roundMode:  NumberFormatter.RoundingMode = .halfEven) -> String {
         return NumberFormatter.decimalString(fromFloatValue: self, withDigits: digits, separator: sep, forceDigit: force, roundMode: roundMode)!
     }
 }
@@ -157,7 +157,7 @@ extension NumberFormatter {
         return ns.number(from: string)
     }
     
-    static func numberOfNoDigitsDecimalString(from string:String, roundMode:  NumberFormatter.RoundingMode = .floor) -> NSNumber? {
+    static func numberOfNoDigitsDecimalString(from string:String, roundMode:  NumberFormatter.RoundingMode = .halfEven) -> NSNumber? {
         return self.numberOfDecimalString(from: string, withDigits: 0, roundMode: roundMode)
     }
 }
